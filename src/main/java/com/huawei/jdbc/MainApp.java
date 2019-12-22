@@ -3,11 +3,10 @@ package com.huawei.jdbc;
 import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.huawei.jdbc.StudentJDBCTemplate;
 public class MainApp {
     public static void main(String[] args) {
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("Beans.xml");
+                new ClassPathXmlApplicationContext("jdbcBean.xml");
         StudentJDBCTemplate studentJDBCTemplate =
                 (StudentJDBCTemplate)context.getBean("studentJDBCTemplate");
         System.out.println("------Records Creation--------" );
